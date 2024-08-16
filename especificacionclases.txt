@@ -1,0 +1,39 @@
+dbf2MySQL
+-----------------------------------------------------------------------
+Clase para Gestionar la creación de tablas en el servidor remoto
+y la copia de datos a partir de tablas DBF, utilizando como metodo
+la carga de archivos de texto.
+
+
+PROPIEDADES:
+------------
+
+METODOS....:
+--------
+setEntorno			Define settings de entorno globales
+clearEntorno		Limpia entorno, cierra tablas, etc.
+scriptCrearBD		Genera script SQL para crear base de datos en servidor remoto.
+scriptCrearTabla	Genera script SQL para crear tabla en servidor remoto, a partir
+					de una tabla DBF.
+					
+conectar			Se conecta al servidor de bases de datos remoto.
+configConexion		Configura conexión al servidor remoto
+
+CopyDbf2Texto		Copia datos de una tabla DBF a un archivo de texto.
+CopyTexto2Sql		Controla carga de archivo de texto a tabla remota.
+
+UpdBitacora			Actualiza eventos y errores en bitacora
+
+----
+LA CREACION DE LA BD y LAS TABLAS REMOTAS SE DEBE
+HACER A PETICION DEL USUARIO.
+----
+FLUJO DE EVENTOS ESCENARIO FELIZ PARA ACTUALIZAR DATOS:
+----
+. definir settings de entorno
+. definir settings de conexion a la base de datos remota
+. comprobar conexion a la base de datos remota, desconectar al terminar
+. Crear archivo de texto a partir de tabla DBF
+. Cargar archivo de texto en tabla remota
+. Mostrar resultado de la copia o registrar en bitacora.
+
