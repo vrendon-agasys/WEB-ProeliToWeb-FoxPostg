@@ -1,0 +1,12 @@
+xdatos, xdatos1 -> dirsdo
+
+direc
+	cambiar ruta de acceso a las tablas
+	
+dirpro
+	cambiar ruta de acceso
+	
+
+---------------------------
+soporte para t.v.
+
