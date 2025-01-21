@@ -14,6 +14,12 @@
 *		Al final de la generación, se va a llamar al archivo "copyTxt2Postg.bat"
 *		localizado en el directorio donde se ejecuta este EXE
 * -----------------------------------------------------------------------------
+* v1.3.0 | 21/ene/2025 | dRendon 
+* A las rutinas para copiar a archivos de texto se agregan las tablas:
+*	guias10 | Paquetes enviados a clientes y oficinas|
+*	cli130  | Ordenes de Retorno |
+*	cli135  | Ordenes de Retorno Detalle |
+* -----------------------------------------------------------------------------
 
 PARAMETERS _modoExec
 
@@ -28,12 +34,12 @@ ENDIF
 
 *SET STEP ON 
 
-*-------------------------------------------------------------------------------*
+*-------------------------------------------------------------------------------
 *	Creacion de Variables Publicas:										
 *	oApp	Contiene el objeto aplicacion
 *	oCtrl	Clase con métodos de control
 *	oDB		Clase con metodos en la base de datos
-*-------------------------------------------------------------------------------*
+*-------------------------------------------------------------------------------
 PUBLIC oApp, oCtrl, oDB, oSecAES
 
 _screen.AutoCenter = .T.
@@ -44,13 +50,13 @@ set asserts off
 SET ESCAPE off
 _screen.Caption	= 'Fox To PostgreSQL'
 *_screen.WindowState	= 2		&& Ventana maximizada
-_screen.WindowState	= 0		&& pantalla normal
+_screen.WindowState	= 0		  && pantalla normal
 set asserts on
 SET ESCAPE on
 
-*-------------------------------------------------------------------------------*
+*-------------------------------------------------------------------------------
 *	Bibliotecas de clase									
-*-------------------------------------------------------------------------------*
+*-------------------------------------------------------------------------------
 set classlib to aplicacion
 
 PUBLIC oApp, oCtrl, oDB, oSecAES
@@ -74,7 +80,7 @@ IF oDB.Setup() = .F.
 ENDIF
 
 *** NOTA IMPORTANTE
-*	---------------
+*   ---------------
 *	Se sugiero ejecutar este programa en el directorio donde estan los
 *	diccionarios de ProELI porque las rutinas heredadas no consideran las
 *	variables oApp.pathProeli ni oApp.pathDirsdo
