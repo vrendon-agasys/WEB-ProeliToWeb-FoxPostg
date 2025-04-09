@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 21/01/2025           MAINMENU.MPR             12:07:28  
+*       * 09/04/2025           MAINMENU.MPR             15:00:04  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -26,12 +26,12 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _73g0pziyy OF _MSYSMENU PROMPT "Archivo" COLOR SCHEME 3 ;
+DEFINE PAD _75m0w5hkh OF _MSYSMENU PROMPT "Archivo" COLOR SCHEME 3 ;
 	KEY ALT+A, ""
-DEFINE PAD _73g0pziyz OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _75m0w5hki OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, ""
-ON PAD _73g0pziyy OF _MSYSMENU ACTIVATE POPUP _5ae11wtij
-ON SELECTION PAD _73g0pziyz OF _MSYSMENU clear events
+ON PAD _75m0w5hkh OF _MSYSMENU ACTIVATE POPUP _5ae11wtij
+ON SELECTION PAD _75m0w5hki OF _MSYSMENU clear events
 
 DEFINE POPUP _5ae11wtij MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF _5ae11wtij PROMPT "\<1. Copia interactiva de tablas"
