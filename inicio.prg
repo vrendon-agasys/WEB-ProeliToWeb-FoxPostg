@@ -27,7 +27,7 @@ IF PCOUNT() < 1
 	_modoExec = "MANUAL"
 ENDIF
 _modoExec=UPPER(_modoExec)
-IF _modoExec <> "AUTO" AND _modoExec <> "MANUAL" AND _modoExec <> "PARIDADES"
+IF _modoExec <> "AUTO" AND _modoExec <> "MANUAL" AND _modoExec <> "PARIDADES" AND _modoExec <> "EXISTENCIAS"
 	MESSAGEBOX("No se reconoce " + _modoExec + " como modo de ejecucion",64,"ATENCION")
 	RETURN 
 ENDIF
@@ -101,6 +101,9 @@ IF oApp.modoExec = "AUTO"
 ENDIF
 IF oApp.modoExec = "PARIDADES"
 	oCtrl.UpdParidades()
+ENDIF
+IF oApp.modoExec = "EXISTENCIAS"
+	oCtrl.UpdExistencias()
 ENDIF
 
 ON SHUTDOWN 
