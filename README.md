@@ -1,7 +1,17 @@
 FoxPostg
 # Control de versiones
+
+## v1.6.0 - 24/may/2025
+1. Existencias MP. Se agrega código para crear archivo de texto
+2. Guias de Paquetes. Se va a crear una tabla con el rol de encabezado de documento, como se hace con los pedidos de cliente.
+
+|Tabla    | Descripcion |
+|---------|-------------|
+| mat042  | Existencias de MP (Producción) |
+| guiasa  | Se crea tabla para header de Guias de Paquetes |
+
 ## v1.5.0 - 04/may/2025
-1. Pedidos de Cliente. Se agregan campos para Ordem de Compra y Tienda Destino 
+1. Pedidos de Cliente. Se agregan campos para Orden de Compra y Tienda Destino 
 
 | Tabla   | Descripcion |
 |---------| ---------------------------------------|
