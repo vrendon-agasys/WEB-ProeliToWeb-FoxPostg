@@ -27,7 +27,11 @@ IF PCOUNT() < 1
 	_modoExec = "MANUAL"
 ENDIF
 _modoExec=UPPER(_modoExec)
-IF _modoExec <> "AUTO" AND _modoExec <> "MANUAL" AND _modoExec <> "PARIDADES" AND _modoExec <> "EXISTENCIAS"
+IF _modoExec <> "AUTO" ;
+			AND _modoExec <> "MANUAL" ;
+			AND _modoExec <> "PARIDADES" ;
+			AND _modoExec <> "EXISTENCIAS" ;
+			AND _modoExec <> "ORDPROD" 
 	MESSAGEBOX("No se reconoce " + _modoExec + " como modo de ejecucion",64,"ATENCION")
 	RETURN 
 ENDIF
@@ -89,22 +93,25 @@ ENDIF
 *oSplash = CREATEOBJECT([formSplash])
 *oSplash.Show()
 *WAIT [] TIMEOUT 2
+DO CASE
+	CASE oApp.modoExec = "MANUAL"
+		*_screen.Picture = 'sombra.png'
+		_screen.BackColor = RGB(120,130,140)
+		do mainMenu.mpr
+		READ EVENTS
+		
+	CASE oApp.modoExec = "AUTO"
+		oCtrl.FlujoContinuo()
+		
+	CASE oApp.modoExec = "PARIDADES"
+		oCtrl.UpdParidades()
+		
+	CASE oApp.modoExec = "EXISTENCIAS"
+		oCtrl.UpdExistencias()
 
-IF oApp.modoExec = "MANUAL"
-	*_screen.Picture = 'sombra.png'
-	_screen.BackColor = RGB(120,130,140)
-	do mainMenu.mpr
-	READ EVENTS
-ENDIF
-IF oApp.modoExec = "AUTO"
-	oCtrl.FlujoContinuo()
-ENDIF
-IF oApp.modoExec = "PARIDADES"
-	oCtrl.UpdParidades()
-ENDIF
-IF oApp.modoExec = "EXISTENCIAS"
-	oCtrl.UpdExistencias()
-ENDIF
+	CASE oApp.modoExec = "ORDPROD"
+		oCtrl.UpdOrdProd()
+ENDCASE
 
 ON SHUTDOWN 
 

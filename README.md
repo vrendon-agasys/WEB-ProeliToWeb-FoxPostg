@@ -1,6 +1,9 @@
 FoxPostg
 # Control de versiones
 
+## v1.7.0 - 29.05.2025
+1. Rutina para crear a petición archivos de texto de ordenes de producción, sobres y existencias de MP.
+
 ## v1.6.0 - 24/may/2025
 1. Existencias MP. Se agrega código para crear archivo de texto
 2. Guias de Paquetes. Se va a crear una tabla con el rol de encabezado de documento, como se hace con los pedidos de cliente.
