@@ -1,6 +1,9 @@
 FoxPostg
 # Control de versiones
 
+## v1.7.1 - 30.05.2025
+1. Se comentan lineas de codigo que fueron usadas para pruebas, para que no afecten la version de produccion.
+
 ## v1.7.0 - 29.05.2025
 1. Rutina para crear a petición archivos de texto de ordenes de producción, sobres y existencias de MP.
 
