@@ -1,19 +1,27 @@
 FoxPostg
 # Control de versiones
 
+## v1.8.0 | 18.07.2025 | Prepedidos
+1. Se agregan rutinas para copiar a texto la tabla de prepedidos "prep100"
+
+|Tabla    | Descripcion |
+|---------|-------------|
+| prep100 | Prepedidos cliente
+
+
 ## v1.7.1 - 30.05.2025
 1. Se comentan lineas de codigo que fueron usadas para pruebas, para que no afecten la version de produccion.
 
 ## v1.7.0 - 29.05.2025
-1. Rutina para crear a petición archivos de texto de ordenes de producción, sobres y existencias de MP.
+1. Rutina para crear a peticiï¿½n archivos de texto de ordenes de producciï¿½n, sobres y existencias de MP.
 
 ## v1.6.0 - 24/may/2025
-1. Existencias MP. Se agrega código para crear archivo de texto
+1. Existencias MP. Se agrega cï¿½digo para crear archivo de texto
 2. Guias de Paquetes. Se va a crear una tabla con el rol de encabezado de documento, como se hace con los pedidos de cliente.
 
 |Tabla    | Descripcion |
 |---------|-------------|
-| mat042  | Existencias de MP (Producción) |
+| mat042  | Existencias de MP (Producciï¿½n) |
 | guiasa  | Se crea tabla para header de Guias de Paquetes |
 
 ## v1.5.0 - 04/may/2025
